@@ -1,0 +1,37 @@
+p {
+  font-size: 18px;
+  color: white;
+}
+
+section {
+  background-color: yellowgreen;
+}
+
+#primo-piano {
+  background-color: red;
+}
+
+a {
+  font-variant: small-caps;
+}
+
+.text-bold {
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: overline;
+}
+
+#lezione3 {
+  background-color: green;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 30px;
+    color: blue;
+  }
+}

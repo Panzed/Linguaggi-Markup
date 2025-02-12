@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verifica HTML</title>
+  </head>
+  <body>
+    <section>
+      <hgroup>
+        <h1>HTML5</h1>
+        <h2>Verifica Tag e Form</h2>
+      </hgroup>
+    </section>
+
+    <section>
+      <h2 id="sommario">Sommario</h2>
+      <nav>
+        <ul>
+          <li><a href="#sommario">Sommario</a></li>
+          <li><a href="#tabella">Tabella</a></li>
+          <li><a href="#form">Form</a></li>
+          <li><a href="#html5">Html5 Tag Semantici</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2 id="tabella">Sezione 1: Tabella</h2>
+
+      <table border="1" style="width: 100%">
+        <caption>
+          <h3>La Tabella Nutrizionale</h3>
+        </caption>
+
+        <thead style="background-color: orangered">
+          <tr>
+            <th>Valori Medi</th>
+            <th>Per 100gr</th>
+            <th>Per porzione (8,7g)</th>
+            <th>Dettagli</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr style="background-color: #f2f2f2">
+            <td><b>Valore Energetico</b></td>
+            <td>
+              1191 kj <br />
+              474 kcal
+            </td>
+            <td>
+              173 kj <br />
+              41 kcal
+            </td>
+            <td rowspan="3">Sezione 1</td>
+          </tr>
+
+          <tr>
+            <td>
+              Grassi <br />
+              di cui acidi saturi
+            </td>
+            <td>
+              18g <br />
+              8,8g
+            </td>
+            <td>
+              1,6g <br />
+              0,8g
+            </td>
+          </tr>
+
+          <tr style="background-color: #f2f2f2">
+            <td>
+              Carboidrati <br />
+              di cui zuccheri
+            </td>
+            <td>
+              70g <br />
+              23,5g
+            </td>
+            <td>
+              6,1g <br />
+              2,0g
+            </td>
+          </tr>
+
+          <tr>
+            <td>Proteine</td>
+            <td>7g</td>
+            <td>6.6g</td>
+            <td rowspan="2">Sezione 2</td>
+          </tr>
+
+          <tr style="background-color: #f2f2f2">
+            <td>Sale</td>
+            <td>0,270g</td>
+            <td>0,023g</td>
+          </tr>
+        </tbody>
+
+        <tfoot style="background-color: aqua">
+          <tr>
+            <td colspan="2"><img src="./Assets/Icone/317727_facebook_social media_social_icon.svg" alt="Facebook icon" /> <span>Facebook.com/sararossinutrizionista</span></td>
+            <td colspan="2"><a href="www.sararossinutrizionista.it">sararossinutrizionista.it</a></td>
+          </tr>
+
+          <tr>
+            <td colspan="4">&#169; <cite>Dottoressa Nutrizionista Sara Rossi</cite></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2 id="form">Sezione 2: Form</h2>
+
+      <form action="form.php" method="get" name="myform">
+        <fieldset>
+          <legend>Dati Anagrafici</legend>
+
+          <label for="cognome">Cognome:</label>
+          <input type="text" name="cognome" id="cognome" placeholder="inp-cognome" autocomplete="off" />
+
+          <label for="nome">Nome:</label>
+          <input type="text" name="nome" id="nome" placeholder="inp-nome" autocomplete="off" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Dati Residenza</legend>
+
+          <label for="indirizzo">Indirizzo:</label>
+          <input type="text" name="indirizzo" id="indirizzo" />
+
+          <label for="cap">CAP:</label>
+          <input type="text" name="cap" id="cap" pattern="[0-9]{5}" />
+
+          <label for="località">Località:</label>
+          <input type="text" name="località" id="località" />
+
+          <label for="provincia">Provincia:</label>
+          <input type="text" name="provincia" id="provincia" />
+
+          <label for="stato">Stato:</label>
+          <select name="stato" id="stato">
+            <optgroup label="Europa">
+              <option value="Italia">Italia</option>
+              <option value="Francia">Francia</option>
+              <option value="Germania">Germania</option>
+            </optgroup>
+
+            <optgroup label="Asia">
+              <option value="Cina">Cina</option>
+              <option value="Thailandia">Thailandia</option>
+              <option value="Giappone">Giappone</option>
+            </optgroup>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dati Contatto</legend>
+
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+
+          <label for="telefono">Tel:</label>
+          <input type="tel" name="telefono" id="telefono" pattern="[0-9]" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Dati Accesso</legend>
+
+          <label for="accessoEmail">Email:</label>
+          <input type="email" name="accessoEmail" id="accessoEmail" />
+
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+
+          <label for="confermaPassword">Conferma Password:</label>
+          <input type="password" name="confermaPassword" id="confermaPassword" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Dati Personali</legend>
+
+          <label for="dataAttuale">Mese + anno Attuale:</label>
+          <input type="month" name="dataAttuale" id="dataAttuale" />
+
+          <label for="colore">Colore preferito:</label>
+          <input type="color" name="colore" id="colore" />
+
+          <label for="età">Età</label>
+          <input type="number" name="età" id="età" min="18" max="99" step="1" />
+
+          <label for="blog">Blog Personale:</label>
+          <input type="url" name="blog" id="blog" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Dati gradimento</legend>
+
+          <label for="voto">Voto:</label>
+          <input type="range" name="voto" id="voto" min="1" max="10" step="1" />
+
+          <label>Sport Preferito:</label>
+          <input list="sport" />
+          <datalist id="sport">
+            <option>Calcio</option>
+            <option>Tennis</option>
+            <option>Basket</option>
+            <option>Nuoto</option>
+          </datalist>
+          <label for="text-area">Commento:</label>
+          <textarea name="text-area" id="text-area" rows="5" cols="50"></textarea>
+        </fieldset>
+
+        <button type="submit">Invia</button>
+      </form>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2 id="html5">Sezione 3: HTML5 Tag</h2>
+      <article>
+        <header>
+          <h3>SOCIAL MEDIA E WEB MARKETING MANAGER</h3>
+        </header>
+
+        <body>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam unde vitae illo harum deleniti neque iure repudiandae cupiditate corrupti, voluptatem magni quaerat autem, aperiam sunt! Dolorum dicta dolore vel alias.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quam hic cumque, praesentium accusantium exercitationem minima veritatis! Et, ullam ipsam veritatis aperiam placeat quae facere rem dolore doloribus maxime voluptatibus?Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Nihil quidem ab accusamus est nemo, natus odio molestias cumque itaque? Molestias atque sequi eius dicta. Eveniet modi hic voluptatem iste inventore?
+        </body>
+
+        <footer>
+          <details>
+            <summary>Approfondimenti</summary>
+            <ul>
+              <li><a href="#sommario">News 1</a></li>
+              <li><a href="#form">News 2</a></li>
+            </ul>
+          </details>
+          <small>Autore: Corsista</small>
+        </footer>
+      </article>
+    </section>
+  </body>
+</html>

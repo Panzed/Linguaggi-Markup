@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lezione 2</title>
+  </head>
+  <body>
+
+    <h1>Lezione 2</h1>
+    <!-- L'attributo "title" serve per evidenziare il testo quanto metti il cursore su un elemento e aspetti (vedi "p" sottostante) -->
+    <p title="Questo è l'attributo title" draggable="true">
+      Esempio di attributo title e draggable
+    </p>
+    <div id="UnicoId">esempio di attributo id</div>
+    <br />
+    <div class="PiùElementi">esempio di attributo class</div>
+    <br />
+    <div style="color: blue">Esempio di Style su html</div>
+    <!-- con il colore, posso usare il codice hex -->
+    <section>
+      <p onclick="console.log ('hai cliccato il p')">
+        Esempio di onClick, lascia un messaggio in console se cliccato
+      </p>
+    </section>
+    <ul>
+      <li data-indirizzo="Piazza la lenza" data-telefono="3863535555">Luca</li>
+      <li data-indirizzo="Via le mani dal naso" data-telefono="3164192342">
+        Paolo
+      </li>
+      <li data-indirizzo="Largo la loggia" data-telefono="3213344314">
+        Umberto
+      </li>
+    </ul>
+
+    <section>
+      <h3>Lista clienti</h3>
+      <div>
+        <span>Carlo Bianchi</span><b> Rimini</b>
+        <br />
+        <span>Maria Bianchi</span> <strong> Riccione</strong>
+        <br />
+        <span>Matteo Pasqui</span> <i> Cesena</i>
+        <br />
+        <span>Giovanni Neri</span> <em> Cattolica</em>
+      </div>
+    </section>
+
+    <h3>Questo è un blockquote</h3>
+    <blockquote>
+      <p>
+        [...] fatti non foste a viver come bruti, ma per seguir virtute e
+        canoscenza
+      </p>
+      <cite>Inferno Canto XXVI - La Divina Commedia</cite>
+    </blockquote>
+
+    <h3>Questo è un apice</h3>
+    E = mc<sup>2</sup>
+
+    <h3>Questo è un pedice</h3>
+    Questo è un <sub>pedice</sub>
+    <!-- per altri esempi, guardi diapositiva n.47 -->
+
+    <h3>Esempio del tag "pre"</h3>
+    <pre>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Sapiente harum autem sit molestias iusto. 
+     Dignissimos saepe libero amet numquam doloremque officia repudiandae,
+     laborum fugiat omnis provident in quo,
+     ut vitae.</pre
+    >
+
+    <h3>Esempi liste</h3>
+    <h4>Esempio lista UL</h4>
+    <nav>
+      <!-- dentro il nav dovrebbero andare dei link che non metterò per motivi illustrativi -->
+      <ul>
+        <li>home</li>
+        <li>chi siamo</li>
+        <li>Contatti</li>
+      </ul>
+    </nav>
+    <h4>Esempio lista OL</h4>
+    <nav>
+      <ol>
+        <li>home</li>
+        <li>chi siamo</li>
+        <li>Contatti</li>
+      </ol>
+    </nav>
+    <h4>Esempio lista DL</h4>
+    <dl>
+      <dt>primo termine</dt>
+      <dd>definizione legata al primo termine</dd>
+      <dt>secondo termine</dt>
+      <dd>definizione secondo termine</dd>
+    </dl>
+
+    <h3>Tabelle</h3>
+    <table border="1">
+      <caption>
+        Orari di Gennaio
+      </caption>
+      <thead>
+        <tr>
+          <th>Giorno</th>
+          <th>Data</th>
+          <th>Ora Inizio</th>
+          <th>Ora Fine</th>
+          <th>Docente</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Martedì</td>
+          <td>28 Gennaio</td>
+          <td>9.00</td>
+          <td>13.00</td>
+          <td rowspan="2">Casadei</td>
+        </tr>
+
+        <tr>
+          <td>Mercoledì</td>
+          <td>29 Gennaio</td>
+          <td>9.00</td>
+          <td>13.00</td>
+        </tr>
+        <tr>
+          <td>Giovedì</td>
+          <td>30 Gennaio</td>
+          <td>9.00</td>
+          <td>13.00</td>
+          <td>Bianchini</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td colspan="3" style="text-align: center">Tot. ore 8</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
+

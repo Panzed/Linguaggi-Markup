@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lezione 4</title>
+    <style>
+      label {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form</h1>
+
+    <form name="Login" action="#" method="get" enctype="multipart/form-data" style="border: 1px solid orange">
+      <!-- Il nome -->
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" placeholder="Digita qui il tuo nome" id="nome" autocomplete="off" />
+      <!-- for, collegato all'id dell'input, aumenta l'accessibilità della zona di input. Autocomplete di base è su ON e permette l'autocompilazione-->
+
+      <br />
+      <br />
+
+      <!-- Il cognome -->
+      <label for="cognome">Cognome:</label>
+      <input type="text" name="cognome" placeholder="Digita qui il tuo cognome" id="cognome" autofocus required />
+      <!-- Autofocus immette il cursore direttamente sull'input, il required rende la compilazione obbligatoria-->
+
+      <br />
+      <br />
+
+      <!-- Per il CAP -->
+      <label for="cap">CAP:</label>
+      <input type="text" name="cap" id="cap" pattern="[0-9]{5}" />
+      <!-- dentro il pattern sono i valori richiesti, in questo caso voglio i numeri da 0 a 9 e 5 numeri obbligatori-->
+
+      <br />
+      <br />
+
+      <!-- Per l'età -->
+      <label for="eta">Età:</label>
+      <input type="number" name="eta" min="14" max="85" step="1" id="eta" />
+      <!-- con type: number e date posso mettere un min e un max, lo step è di quanto bisogna saltare tra un numero ed un altro-->
+
+      <br />
+      <br />
+
+      <textarea name="text-area" id="text-area" rows="10" cols="30" placeholder="Scrivi un testo"></textarea>
+
+      <br />
+      <br />
+
+      <!-- il raggruppamento di più form si fa con il tag fieldset e il nome del raggruppamento con il tag legend-->
+      <fieldset>
+        <legend>Lista type input:</legend>
+        <label for="privacy">Accetto il trattamento</label>
+        <input type="checkbox" name="privacy" id="privacy" checked />
+        <!-- checked come attributo è il punto di partenza da cui parte la tua checkbox. Nei consensi, MAI mettere come checked il "si"-->
+        <br />
+        <br />
+        <label for="color">Seleziona il colore</label>
+        <input type="color" name="colore" id="color" />
+        <br />
+        <br />
+        <label for="cartaid">Carta id:</label>
+        <input type="file" name="cartaid" id="cartaid" />
+        <br />
+        <br />
+        <label for="password">password:</label>
+        <input type="password" name="password" id="password" maxlength="40" />
+      </fieldset>
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Tipo di Utente:</legend>
+        <label for="tipo1">Privato</label>
+        <input type="radio" name="tipo" id="tipo1" value="1" />
+        <label for="tipo2">Azienda</label>
+        <input type="radio" name="tipo" id="tipo2" value="2" checked />
+      </fieldset>
+      <!-- il value viene definito per mandare una risposta al server al momento del submit-->
+      <!-- Per vedere i diversi input: diapositiva pag.83-->
+
+      <br />
+      <br />
+
+      <fieldset>
+        <legend>Colore:</legend>
+        <label for="colore-preferito">colore preferito:</label>
+        <select name="colore-preferito" id="colore-preferito">
+          <optgroup label="colori1">
+            <option value="-" selected>-</option>
+            <option value="bianco">Bianco</option>
+            <option value="nero">Nero</option>
+          </optgroup>
+          <optgroup label="colori2">
+            <option value="rosso">Rosso</option>
+            <option value="blu">Blu</option>
+            <option value="giallo">Giallo</option>
+            <option value="verde">Verde</option>
+          </optgroup>
+        </select>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <!-- DA RIVEDERE !!!!!!!!!-->
+      <fieldset>
+        <legend>Film preferito:</legend>
+        <label>Categoria:</label>
+        <input list="genere-film" />
+        <datalist id="genere-film">
+          <option>Comico</option>
+          <option>Drammatico</option>
+          <option>Romantico</option>
+        </datalist>
+      </fieldset>
+      <!-- l'attributo list nel tag input e l'attributo id su datalist devono compaciare per essere collegati-->
+
+      <br />
+      <br />
+
+      <details>
+        <summary>Dettagli</summary>
+        <p>ciao</p>
+        <p>mi</p>
+        <p>chiamo</p>
+        <p>Matteo</p>
+      </details>
+
+      <br>
+      <br>
+
+      <fieldset>
+        <legend>Esprimi la tua valutazione</legend>
+        <label for="valutazione">Esprimi la tua valutazione</label>
+        <input type="range" name="valutazione" id="valtazione" min="0" max="10" step="1">
+      </fieldset>
+
+      <!-- DA RIVEDERE!!!!! -->
+      <!-- I pulsanti-->
+      <input type="submit" value="Invia da input" />
+      <!-- Puoi metterci all'interno anche un'immagine-->
+      <button type="submit">Invia da Button</button>
+      <!-- Usato maggiormente per collegarlo ad altre azioni con JS -->
+    </form>
+  </body>
+</html>
+
