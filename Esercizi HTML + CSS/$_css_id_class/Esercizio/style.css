@@ -1,0 +1,27 @@
+h2 {
+  color: #57c4e5;
+}
+img {
+  width: 100px;
+}
+p {
+  background-color: #edf2ef;
+  width: 50%;
+}
+span,
+h1,
+p {
+  color: #212738;
+}
+
+.img-thumbnail {
+  width: 125px;
+}
+
+#prima {
+  color: #f97068;
+}
+
+.testo-grande {
+  font-size: 2rem;
+}
