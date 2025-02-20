@@ -1,3 +1,7 @@
+body {
+  margin: 30px auto;
+}
+
 #scacchiera {
   width: 600px;
   height: 600px;
