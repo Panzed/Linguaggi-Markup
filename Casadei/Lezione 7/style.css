@@ -19,7 +19,7 @@ nav {
 }
 
 /* tutti i fratelli del primo "li" che sono dentro ul, dentro nav */
-nav ul li ~ li {
+nav ul li ~ li {     /* ~ (option 5) = fratelli */
   margin-left: 10%;
 }
 
