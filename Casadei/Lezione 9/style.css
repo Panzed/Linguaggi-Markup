@@ -1,0 +1,174 @@
+:root {
+  --bs-blue: blue;
+  --bs-pink: pink;
+  --bs-orange: orange;
+}
+
+/* section topbar */
+
+section#topbar {
+  background-color: cadetblue;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  overflow: auto; /* overflow auto per far si che il contenuto non fuoriesca dal contenitore */
+}
+
+section#topbar a {
+  color: white;
+  text-decoration: none;
+}
+
+section#topbar a:nth-child(1) {
+  float: left;
+}
+
+section#topbar a:nth-child(2) {
+  float: right;
+}
+
+h1 {
+  text-shadow: 5px 5px 3px cadetblue;
+}
+
+/* menu nav */
+
+nav#menu {
+  background-color: var(--bs-blue);
+  padding: 10px;
+  position: sticky; /* posizionamento sticky per far si che il menu rimanga fisso in alto in relazione al body o al primo genitore con posizione diversa da static */
+  top: 0;
+  z-index: 99; /* z-index per sovrapporre il menu a tutti gli altri elementi */
+}
+
+nav#menu ul {
+  text-align: center;
+}
+
+nav#menu ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav#menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav#menu ul li a:hover {
+  color: var(--bs-orange);
+  text-decoration: underline;
+}
+
+/* section #posizionamenti */
+
+section#posizionamenti {
+  min-height: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+section#posizionamenti div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+section#posizionamenti div:nth-child(1) {
+  background-color: var(--bs-blue);
+  position: relative; /* posizionamento relativo in relazione alla sua posizione iniziale*/
+  top: 15px;
+  left: 30px;
+}
+
+section#posizionamenti div:nth-child(2) {
+  background-color: var(--bs-pink);
+  position: absolute; /* posizionamento assoluto in relazione alla sua posizione iniziale collegato al primo padre con posizionamento diverso da static, in questo caso il section#posizionamenti */
+  bottom: 0;
+  right: 0;
+}
+
+section#posizionamenti div:nth-child(3) {
+  background-color: var(--bs-orange);
+}
+
+/* section #mission */
+
+/* bello!! effetto immagine con overlay */
+section#mission {
+  min-height: 250px;
+  background-image: url("./asset/img/future.jpg");
+  background-size: cover; /* adatta l'immagine alla grandezza del contenitore */
+  background-position: center; /* posiziona l'immagine al centro del contenitore */
+  background-attachment: fixed; /* l'immagine rimane fissa rispetto al body */
+  margin-top: 2em;
+  position: relative;
+}
+
+.pellicola {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* colore di sfondo con trasparenza */
+  position: absolute;
+}
+
+section#mission h2 {
+  color: white;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tabella */
+table,
+td,
+tr {
+  border: 5px solid black;
+  border-collapse: collapse;  /* unisce i bordi delle celle ma in questo caso è già automatico con bootstrap */
+  cursor: none;
+}
+
+/* flexbox articoli */
+
+article {
+    text-align: justify;
+}
+
+section#news {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* icona whatsapp */
+
+.bi-whatsapp {
+  color: green;
+  font-size: 2rem;
+  position: fixed; /* posizionamento fisso in relazione al body */
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  /* visibility: hidden;  nascondo l'icona ma occupa comunque lo spazio senza far muovere nessun altro oggentto */
+  /* display: none;       nascondo l'icona come se non ci fosse */
+}
+
+
+/* media query */
+@media screen and (min-width: 768px) {
+  section#news {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  section#news article {
+    max-width: 40%;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+    section#news article {
+        max-width: 30%;
+    }
+}

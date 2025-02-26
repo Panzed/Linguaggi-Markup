@@ -22,13 +22,11 @@ body > footer {
 nav#menu > ul {
   margin-bottom: 0;
   padding: 50px 0;
+  text-align: center;
 }
 nav#menu a {
   color: white;
   text-decoration: none;
-}
-nav#menu > ul {
-  text-align: center;
 }
 nav#menu > ul > li {
   display: inline;
@@ -36,12 +34,10 @@ nav#menu > ul > li {
 nav#menu > ul > li ~ li {
   margin-left: 10px;
 }
-
 nav#menu > ul > li > a::after {
   content: " | ";
   margin: 10px;
 }
-
 nav#menu > ul > li > a:hover {
   background-color: red;
   border-radius: 7px;
@@ -78,7 +74,7 @@ section article:nth-child(2) {
 }
 
 article a:link {
-  color: yellow;
+  color: black;
 }
 
 a:active {
