@@ -6,12 +6,7 @@
     color: white;
 }
 /**/
-.bg-spyre{
-    background-color: var(--spyre-red);
-}
-.overline{
-    text-decoration: overline;
-}
+
 .color-spyre{
     color: var(--spyre-red);
 }
