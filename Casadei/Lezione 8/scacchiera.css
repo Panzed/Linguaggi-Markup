@@ -1,0 +1,47 @@
+body {
+  margin: 30vh auto;
+}
+
+#scacchiera {
+  width: 600px;
+  height: 600px;
+  border: 5px dashed black;
+  font-size: 0;
+  margin: auto;
+  background-color: red;
+}
+
+div {
+  display: inline-block ;
+  width: 200px;
+  height: 200px;  
+}
+
+div:nth-child(odd) {
+  background-color: grey;
+  color: black;
+}
+
+div:nth-child(even) {
+  background-color: black;
+  color: white;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 90px;
+}
+
+div:hover {
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+div:hover p {
+  transform: rotate3d(1, 1, 1, 360deg);
+  color: red;
+  font-style: oblique;
+  font-weight: bold;
+  transition: all 0.5s;
+}

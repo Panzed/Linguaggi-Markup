@@ -1,0 +1,47 @@
+#offcanvasNavbar2 a {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.carousel-caption > h5 {
+  font-size: 56px;
+}
+.carousel-caption > p {
+  font-size: 28px;
+}
+
+#carouselExampleCaptions .img1 {
+  min-height: 250px;
+  width: 100vw;
+  background-image: url(./img/header1.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+#carouselExampleCaptions .img2 {
+  min-height: 300px;
+  width: 100vw;
+  background-image: url(./img/header2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.servizi{
+    font-size: 50px;
+}
+
+.servizio{
+    border: 1px solid #dee2e6;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.row hr{
+    width: 50%;
+
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-item {
+    height: 450px;
+  }
+}
